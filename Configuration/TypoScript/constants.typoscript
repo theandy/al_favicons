@@ -1,27 +1,28 @@
 # === Favicons: Basis ===
-# cat=Favicons/10; type=string; label=Base path to icons (trailing slash)
-plugin.tx.spfavicons.basePath = EXT:al_favicons/Resources/Public/Icons/
 
 # cat=Favicons/20; type=string; label=SVG favicon filename
-plugin.tx.spfavicons.svg = favicon.svg
+plugin.tx.alfavicons.svgLight = favicon_light.svg
+
+# cat=Favicons/20; type=string; label=SVG favicon filename
+plugin.tx.alfavicons.svgDark = favicon_dark.svg
 
 # cat=Favicons/20; type=string; label=ICO filename
-plugin.tx.spfavicons.ico = favicon.ico
+# plugin.tx.alfavicons.ico = favicon.ico
 
-# cat=Favicons/20; type=string; label=PNG 32x32 filename
-plugin.tx.spfavicons.png32 = favicon-32x32.png
+# cat=Favicons/20; type=string; label=ICO filename
+plugin.tx.alfavicons.lightMasterPNG = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
 
-# cat=Favicons/20; type=string; label=PNG 192x192 (Android/manifest) filename
-plugin.tx.spfavicons.png192 = favicon-192x192.png
-
-# cat=Favicons/20; type=string; label=Apple Touch 180x180 filename
-plugin.tx.spfavicons.apple180 = apple-touch-icon.png
+# cat=Favicons/20; type=string; label=ICO filename
+plugin.tx.alfavicons.darkMasterPNG = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
 
 # cat=Favicons/30; type=string; label=Web App Manifest filename
 plugin.tx.spfavicons.manifest = site.webmanifest
 
 # cat=Favicons/40; type=string; label=Theme color (meta)
 plugin.tx.spfavicons.themeColor = #0f172a
+
+
+
 
 # === Dynamic CSS ===
 # cat=Favicons CSS/10; type=bool; label=Emit dynamic CSS file (via ?type=8421)

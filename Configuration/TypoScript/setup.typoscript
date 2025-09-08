@@ -7,26 +7,16 @@ page {
             file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconsGenerated.html
             variables {
 
+                ico = $plugin.tx.alfavicons.ico}
+
                 # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
                 lightMaster = TEXT
-                lightMaster.value = {$plugin.tx.spfavicons.basePath}favicon-light.png
+                lightMaster.value = {$plugin.tx.alfavicons.lightMaster}
 
-                basePath = TEXT
-                basePath.value = {$plugin.tx.spfavicons.basePath}
-                svg = TEXT
-                svg.value = {$plugin.tx.spfavicons.svg}
-                ico = TEXT
-                ico.value = {$plugin.tx.spfavicons.ico}
-                png32 = TEXT
-                png32.value = {$plugin.tx.spfavicons.png32}
-                png192 = TEXT
-                png192.value = {$plugin.tx.spfavicons.png192}
-                apple180 = TEXT
-                apple180.value = {$plugin.tx.spfavicons.apple180}
-                manifest = TEXT
-                manifest.value = {$plugin.tx.spfavicons.manifest}
-                themeColor = TEXT
-                themeColor.value = {$plugin.tx.spfavicons.themeColor}
+                # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
+                darkMasterPNG = TEXT
+                darkMasterPNG.value = {$plugin.tx.alfavicons.darkMasterPNG}
+
             }
         }
 
