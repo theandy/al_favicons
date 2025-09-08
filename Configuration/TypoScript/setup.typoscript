@@ -47,7 +47,7 @@ page {
                 forceAbsoluteUrl = 0
             }
             wrap = <link rel="stylesheet" id="andreas" href="|">
-            if.isTrue = {$plugin.tx.spfavicons.generateCss}
+            # if.isTrue = {$plugin.tx.spfavicons.generateCss}
         }
     }
 }
