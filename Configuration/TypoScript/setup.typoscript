@@ -2,40 +2,29 @@
 page {
     headerData {
 
-        # SVG (modern)
-        90010 = TEXT
-        90010.value = <link rel="icon" type="image/svg+xml" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.svg}">
-        90010.if.isTrue = {$plugin.tx.spfavicons.svg}
+        page.headerData.90000 = FLUIDTEMPLATE
+        page.headerData.90000 {
+            file = EXT:al_favicons/Resources/Private/Partials/Head/Favicons.html
+            variables {
+                basePath = TEXT
+                basePath.value = {$plugin.tx.spfavicons.basePath}
+                svg = TEXT
+                svg.value = {$plugin.tx.spfavicons.svg}
+                ico = TEXT
+                ico.value = {$plugin.tx.spfavicons.ico}
+                png32 = TEXT
+                png32.value = {$plugin.tx.spfavicons.png32}
+                png192 = TEXT
+                png192.value = {$plugin.tx.spfavicons.png192}
+                apple180 = TEXT
+                apple180.value = {$plugin.tx.spfavicons.apple180}
+                manifest = TEXT
+                manifest.value = {$plugin.tx.spfavicons.manifest}
+                themeColor = TEXT
+                themeColor.value = {$plugin.tx.spfavicons.themeColor}
+            }
+        }
 
-        # ICO (Fallback für alte Browser/Windows)
-        90020 = TEXT
-        90020.value = <link rel="icon" type="image/x-icon" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.ico}">
-        90020.if.isTrue = {$plugin.tx.spfavicons.ico}
-
-        # PNG 32
-        90030 = TEXT
-        90030.value = <link rel="icon" type="image/png" sizes="32x32" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.png32}">
-        90030.if.isTrue = {$plugin.tx.spfavicons.png32}
-
-        # PNG 192 (Android)
-        90040 = TEXT
-        90040.value = <link rel="icon" type="image/png" sizes="192x192" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.png192}">
-        90040.if.isTrue = {$plugin.tx.spfavicons.png192}
-
-        # Apple Touch
-        90050 = TEXT
-        90050.value = <link rel="apple-touch-icon" sizes="180x180" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.apple180}">
-        90050.if.isTrue = {$plugin.tx.spfavicons.apple180}
-
-        # Manifest
-        90060 = TEXT
-        90060.value = <link rel="manifest" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.manifest}">
-        90060.if.isTrue = {$plugin.tx.spfavicons.manifest}
-
-        # Theme Color
-        90070 = TEXT
-        90070.value = <meta name="theme-color" content="{$plugin.tx.spfavicons.themeColor}">
-        90070.if.isTrue = {$plugin.tx.spfavicons.themeColor}
 
         # Dynamische CSS einbinden (als echte Datei über ?type=8421)
         90100 = TEXT
@@ -87,6 +76,7 @@ spfavicons_css {
 
 
     }
+
 
 
 }
