@@ -65,6 +65,7 @@ spfavicons_css {
         additionalHeaders = Content-Type:text/css
     }
 
+    /*
     10 = FLUIDTEMPLATE
     10 {
         template = EXT:al_favicons/Resources/Private/Templates/Css/Favicons.css
@@ -82,4 +83,6 @@ spfavicons_css {
             png192.value = {$plugin.tx.spfavicons.png192}
         }
     }
+    */
+
 }
