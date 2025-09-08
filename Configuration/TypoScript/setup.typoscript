@@ -2,8 +2,8 @@
 page {
     headerData {
 
-        page.headerData.90000 = FLUIDTEMPLATE
-        page.headerData.90000 {
+        90000 = FLUIDTEMPLATE
+        90000 {
             file = EXT:al_favicons/Resources/Private/Partials/Head/Favicons.html
             variables {
                 basePath = TEXT
