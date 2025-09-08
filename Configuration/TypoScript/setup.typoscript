@@ -10,8 +10,8 @@ page {
                 ico = $plugin.tx.alfavicons.ico}
 
                 # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                lightMaster = TEXT
-                lightMaster.value = {$plugin.tx.alfavicons.lightMaster}
+                lightMasterPNG = TEXT
+                lightMasterPNG.value = {$plugin.tx.alfavicons.lightMasterPNG}
 
                 # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
                 darkMasterPNG = TEXT

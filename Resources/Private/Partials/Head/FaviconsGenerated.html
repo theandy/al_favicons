@@ -10,35 +10,17 @@
 <f:if condition="{lightMasterPNG}">
     <!-- Light mode favicons -->
     <f:for each="{sizes}" as="s">
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="{s}x{s}"
-            media="(prefers-color-scheme: light)"
-            href="{f:uri.image(src: lightMasterPNG, width: s, height: s)}" />
+        <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: light)" href="{f:uri.image(src: lightMasterPNG, width: s, height: s)}" />
     </f:for>
 
     <!-- Apple touch (from same master) -->
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        media="(prefers-color-scheme: light)"
-        href="{f:uri.image(src: lightMasterPNG, width: 180, height: 180)}" />
+    <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: light)" href="{f:uri.image(src: lightMasterPNG, width: 180, height: 180)}" />
 </f:if>
 
 <f:if condition="{darkMasterPNG}">
     <!-- Dark mode favicons -->
     <f:for each="{sizes}" as="s">
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="{s}x{s}"
-            media="(prefers-color-scheme: dark)"
-            href="{f:uri.image(src: darkMasterPNG, width: s, height: s)}" />
+        <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: darkMasterPNG, width: s, height: s)}" />
     </f:for>
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        media="(prefers-color-scheme: dark)"
-        href="{f:uri.image(src: darkMasterPNG, width: 180, height: 180)}" />
+    <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: darkMasterPNG, width: 180, height: 180)}" />
 </f:if>
