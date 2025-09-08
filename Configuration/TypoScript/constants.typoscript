@@ -1,56 +1,31 @@
-######################
-#### DEPENDENCIES ####
-######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+# === Favicons: Basis ===
+# cat=Favicons/10; type=string; label=Base path to icons (trailing slash)
+plugin.tx.spfavicons.basePath = fileadmin/icons/
 
+# cat=Favicons/20; type=string; label=SVG favicon filename
+plugin.tx.spfavicons.svg = favicon.svg
 
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = EXT:al_favicons/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:al_favicons/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:al_favicons/Resources/Private/Templates/ContentElements/
-    }
-}
+# cat=Favicons/20; type=string; label=ICO filename
+plugin.tx.spfavicons.ico = favicon.ico
 
+# cat=Favicons/20; type=string; label=PNG 32x32 filename
+plugin.tx.spfavicons.png32 = favicon-32x32.png
 
-############
-### PAGE ###
-############
-page {
-     fluidtemplate {
-        layoutRootPath = EXT:al_favicons/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:al_favicons/Resources/Private/Partials/Page/
-        templateRootPath = EXT:al_favicons/Resources/Private/Templates/Page/
-    }
-    meta {
-        description =
-        author =
-        keywords =
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        compatible = IE=edge
-    }
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
-    }
-}
+# cat=Favicons/20; type=string; label=PNG 192x192 (Android/manifest) filename
+plugin.tx.spfavicons.png192 = favicon-192x192.png
 
+# cat=Favicons/20; type=string; label=Apple Touch 180x180 filename
+plugin.tx.spfavicons.apple180 = apple-touch-icon.png
 
-##############
-### CONFIG ###
-##############
-config {
-    no_cache = 0
-    removeDefaultJS = 0
-    admPanel = 1
-    prefixLocalAnchors = all
-    headerComment = build by get.typo3.org/sitepackage
-    sendCacheHeaders = 1
-}
+# cat=Favicons/30; type=string; label=Web App Manifest filename
+plugin.tx.spfavicons.manifest = site.webmanifest
+
+# cat=Favicons/40; type=string; label=Theme color (meta)
+plugin.tx.spfavicons.themeColor = #0f172a
+
+# === Dynamic CSS ===
+# cat=Favicons CSS/10; type=bool; label=Emit dynamic CSS file (via ?type=8421)
+plugin.tx.spfavicons.generateCss = 1
+
+# cat=Favicons CSS/20; type=bool; label=No-cache for CSS page (dev only)
+plugin.tx.spfavicons.cssNoCache = 0

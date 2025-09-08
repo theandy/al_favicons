@@ -1,203 +1,85 @@
-######################
-#### DEPENDENCIES ####
-######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-
-
-################
-#### HELPER ####
-################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:al_favicons/Configuration/TypoScript/Helper/DynamicContent.typoscript">
-
-
-##############
-#### PAGE ####
-##############
-page = PAGE
+# --- Favicon-Linktags in den <head> schreiben ---
 page {
-    typeNum = 0
-    shortcutIcon = EXT:al_favicons/Resources/Public/Icons/favicon.ico
+    headerData {
 
-    10 = FLUIDTEMPLATE
-    10 {
-        # Template names will be generated automatically by converting the applied
-        # backend_layout, there is no explicit mapping necessary anymore.
-        #
-        # BackendLayout Key
-        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        #
-        # Backend Record
-        # uid: 1 -> 1.html
-        #
-        # Database Entry
-        # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        templateName = TEXT
-        templateName {
-            cObject = TEXT
-            cObject {
-                data = pagelayout
-                required = 1
-                case = uppercamelcase
-                split {
-                    token = pagets__
-                    cObjNum = 1
-                    1.current = 1
-                }
+        # SVG (modern)
+        90010 = TEXT
+        90010.value = <link rel="icon" type="image/svg+xml" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.svg}">
+        90010.if.isTrue = {$plugin.tx.spfavicons.svg}
+
+        # ICO (Fallback für alte Browser/Windows)
+        90020 = TEXT
+        90020.value = <link rel="icon" type="image/x-icon" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.ico}">
+        90020.if.isTrue = {$plugin.tx.spfavicons.ico}
+
+        # PNG 32
+        90030 = TEXT
+        90030.value = <link rel="icon" type="image/png" sizes="32x32" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.png32}">
+        90030.if.isTrue = {$plugin.tx.spfavicons.png32}
+
+        # PNG 192 (Android)
+        90040 = TEXT
+        90040.value = <link rel="icon" type="image/png" sizes="192x192" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.png192}">
+        90040.if.isTrue = {$plugin.tx.spfavicons.png192}
+
+        # Apple Touch
+        90050 = TEXT
+        90050.value = <link rel="apple-touch-icon" sizes="180x180" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.apple180}">
+        90050.if.isTrue = {$plugin.tx.spfavicons.apple180}
+
+        # Manifest
+        90060 = TEXT
+        90060.value = <link rel="manifest" href="{$plugin.tx.spfavicons.basePath}{$plugin.tx.spfavicons.manifest}">
+        90060.if.isTrue = {$plugin.tx.spfavicons.manifest}
+
+        # Theme Color
+        90070 = TEXT
+        90070.value = <meta name="theme-color" content="{$plugin.tx.spfavicons.themeColor}">
+        90070.if.isTrue = {$plugin.tx.spfavicons.themeColor}
+
+        # Dynamische CSS einbinden (als echte Datei über ?type=8421)
+        90100 = TEXT
+        90100 {
+            typolink {
+                parameter.data = TSFE:id
+                additionalParams = &type=8421
+                returnLast = url
+                forceAbsoluteUrl = 0
             }
-            ifEmpty = Default
+            wrap = <link rel="stylesheet" href="|">
+            if.isTrue = {$plugin.tx.spfavicons.generateCss}
         }
-        templateRootPaths {
-            0 = EXT:al_favicons/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:al_favicons/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:al_favicons/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
-        dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-                references.fieldName = media
-            }
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 2
-                includeSpacer = 1
-                as = mainnavigation
-            }
-        }
-    }
-
-    meta {
-        viewport = {$page.meta.viewport}
-        robots = {$page.meta.robots}
-        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        description = {$page.meta.description}
-        description {
-            override.field = description
-        }
-        author = {$page.meta.author}
-        author {
-            override.field = author
-        }
-        keywords = {$page.meta.keywords}
-        keywords {
-            override.field = keywords
-        }
-        X-UA-Compatible = {$page.meta.compatible}
-        X-UA-Compatible {
-            attribute = http-equiv
-        }
-
-        # OpenGraph Tags
-        og:title {
-            attribute = property
-            field = title
-        }
-        og:site_name {
-            attribute = property
-            data = TSFE:tmpl|setup|sitetitle
-        }
-        og:description = {$page.meta.description}
-        og:description {
-            attribute = property
-            field = description
-        }
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    includeCSSLibs {
-
-    }
-
-    includeCSS {
-        al_favicons_layout = EXT:al_favicons/Resources/Public/Css/layout.min.css
-    }
-
-    includeJSLibs {
-
-    }
-
-    includeJS {
-
-    }
-
-    includeJSFooterlibs {
-
-    }
-
-    includeJSFooter {
-        al_favicons_scripts = EXT:al_favicons/Resources/Public/JavaScript/Dist/scripts.js
     }
 }
 
+# --- PAGE-Objekt, das CSS ausliefert (?type=8421) ---
+spfavicons_css = PAGE
+spfavicons_css {
+    typeNum = 8421
 
-################
-#### CONFIG ####
-################
-config {
-    absRefPrefix = auto
-    no_cache = {$config.no_cache}
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    linkVars = L
-    prefixLocalAnchors = {$config.prefixLocalAnchors}
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
-    removeDefaultJS = {$config.removeDefaultJS}
-    inlineStyle2TempFile = 1
-    admPanel = {$config.admPanel}
-    debug = 0
-    cache_period = 86400
-    sendCacheHeaders = {$config.sendCacheHeaders}
-    intTarget =
-    extTarget =
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
-    headerComment = {$config.headerComment}
+    config {
+        disableAllHeaderCode = 1
+        admPanel = 0
+        xhtml_cleaning = 0
+        no_cache = {$plugin.tx.spfavicons.cssNoCache}
+        additionalHeaders = Content-Type:text/css
+    }
 
-    // Disable Image Upscaling
-    noScaleUp = 1
+    10 = FLUIDTEMPLATE
+    10 {
+        template = EXT:sp_favicons/Resources/Private/Templates/Css/Favicons.css
+        variables {
+            basePath = TEXT
+            basePath.value = {$plugin.tx.spfavicons.basePath}
 
-    // Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
+            themeColor = TEXT
+            themeColor.value = {$plugin.tx.spfavicons.themeColor}
+
+            apple180 = TEXT
+            apple180.value = {$plugin.tx.spfavicons.apple180}
+
+            png192 = TEXT
+            png192.value = {$plugin.tx.spfavicons.png192}
+        }
+    }
 }
