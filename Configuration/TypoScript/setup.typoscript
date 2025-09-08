@@ -46,7 +46,7 @@ page {
                 returnLast = url
                 forceAbsoluteUrl = 0
             }
-            wrap = <link rel="stylesheet" href="|">
+            wrap = <link rel="stylesheet" id="andreas" href="|">
             if.isTrue = {$plugin.tx.spfavicons.generateCss}
         }
     }
@@ -67,7 +67,7 @@ spfavicons_css {
 
     10 = FLUIDTEMPLATE
     10 {
-        template = EXT:sp_favicons/Resources/Private/Templates/Css/Favicons.css
+        template = EXT:al_favicons/Resources/Private/Templates/Css/Favicons.css
         variables {
             basePath = TEXT
             basePath.value = {$plugin.tx.spfavicons.basePath}
