@@ -70,7 +70,7 @@ spfavicons_css {
     10 {
         file = EXT:al_favicons/Resources/Private/Templates/Css/Favicons.css
 
-        /*
+
         variables {
             basePath = TEXT
             basePath.value = {$plugin.tx.spfavicons.basePath}
@@ -85,7 +85,7 @@ spfavicons_css {
             png192.value = {$plugin.tx.spfavicons.png192}
         }
 
-        */
+
     }
 
 

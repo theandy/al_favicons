@@ -1,3 +1,8 @@
+:root {
+    /* Kannst du global im Projekt nutzen */
+    --brand-theme-color: {themeColor};
+}
+
 body {
 
 }
