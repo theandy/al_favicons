@@ -4,8 +4,13 @@ page {
 
         90000 = FLUIDTEMPLATE
         90000 {
-            file = EXT:al_favicons/Resources/Private/Partials/Head/Favicons.html
+            file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconsGenerated.html
             variables {
+
+                # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
+                lightMaster = TEXT
+                lightMaster.value = {$plugin.tx.spfavicons.basePath}favicon-light.png
+
                 basePath = TEXT
                 basePath.value = {$plugin.tx.spfavicons.basePath}
                 svg = TEXT

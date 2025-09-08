@@ -1,6 +1,6 @@
 # === Favicons: Basis ===
 # cat=Favicons/10; type=string; label=Base path to icons (trailing slash)
-plugin.tx.spfavicons.basePath = fileadmin/icons/
+plugin.tx.spfavicons.basePath = EXT:al_favicons/Resources/Public/Icons/
 
 # cat=Favicons/20; type=string; label=SVG favicon filename
 plugin.tx.spfavicons.svg = favicon.svg
