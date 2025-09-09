@@ -15,9 +15,9 @@
 <f:if condition="{icon512}">,</f:if>
 </f:if>
 <f:if condition="{icon512}">
-{"src":"{f:uri.resource(path: icon512)}","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+<f:format.raw>{</f:format.raw>"src":"{f:uri.resource(path: icon512)}","sizes":"512x512","type":"image/png","purpose":"any maskable"<f:format.raw>}</f:format.raw>
 </f:if>
-]
-}
+<f:format.raw>]</f:format.raw>
+<f:format.raw>}</f:format.raw>
 
 </f:spaceless>
