@@ -23,8 +23,8 @@ page {
             settings {
                 files {
 
-                    ico = TEXT
-                    ico.value = {$plugin.tx.alfavicons.files.ico}
+
+                    ico = {$plugin.tx.alfavicons.files.ico}
 
                     # svg = TEXT
                     # svg.value = {$plugin.tx.alfavicons.files.svg}
