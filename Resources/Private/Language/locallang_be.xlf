@@ -6,6 +6,17 @@
             <authorEmail>info@andreasloewer.de</authorEmail>
         </header>
         <body>
+
+        <!-- Categories / Subcategories -->
+              <trans-unit id="cat.favicons">
+                <source>Favicons-Label!</source>
+              </trans-unit>
+
+<!-- Labels for constants (optional, falls du label=LLL:… verwenden willst) -->
+      <trans-unit id="label.files.svg">
+        <source>SVG favicon: Path to SVG file</source>
+      </trans-unit>
+
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
