@@ -3,48 +3,23 @@
 
 # --- Favicon-Linktags in den <head> schreiben ---
 page {
-
     headerData {
-
         90000 = FLUIDTEMPLATE
         90000 {
-
             file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconsGenerated.html
             variables {
-
                 appTitle = TEXT
                 appTitle.value = {$plugin.tx.alfavicons.appTitle}
-
-
-
-
             }
 
             settings {
                 files {
-
-
                     ico = {$plugin.tx.alfavicons.files.ico}
-
-                    # svg = TEXT
-                    # svg.value = {$plugin.tx.alfavicons.files.svg}
-
-                    # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                    # pngLight = TEXT
-                    # pngLight.value = {$plugin.tx.alfavicons.files.pngLight}
-
+                    svg = {$plugin.tx.alfavicons.files.svg}
                     pngLight = {$plugin.tx.alfavicons.files.pngLight}
-
-                    # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                    pngDark = TEXT
-                    pngDark.value = {$plugin.tx.alfavicons.files.pngDark}
-
+                    pngDark = {$plugin.tx.alfavicons.files.pngDark}
                 }
             }
-
         }
-
-
-
     }
 }
