@@ -16,7 +16,7 @@ alfavicons_manifest {
 
     10 = FLUIDTEMPLATE
     10 {
-        file = EXT:al_favicons/Resources/Private/Templates/Manifest.json
+        file = EXT:al_favicons/Resources/Private/Templates/Manifest.html
 
         variables {
 
