@@ -31,10 +31,11 @@ page {
         }
         */
 
-        90050 = TEXT
+        90050 = FLUIDTEMPLATE
         90050 {
-            value = {$plugin.tx.spfavicons.svgFile}
-            wrap = <link rel="icon" type="image/svg+xml" href="|">
+            file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconSvg.html
+            variables.svgPath = TEXT
+            variables.svgPath.value = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
         }
 
         # Dynamische CSS einbinden (als echte Datei über ?type=8421)
