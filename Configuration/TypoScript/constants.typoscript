@@ -1,75 +1,61 @@
-# constants.typoscript
-
-# Kategorie- und Subkategorie-Titel aus LLL:
+# constants.typoscript  (oberhalb der Konstanten, NICHT auskommentieren!)
 customcategory=favicons=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:cat.favicons
 customsubcategory=favicons/files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
-
+customsubcategory=favicons/app=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.app
+customsubcategory=favicons/manifest=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.manifest
+customsubcategory=favicons/css=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.css
 
 plugin.tx.alfavicons {
 
-
     files {
-        # cat=favicons/files/a; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
+        # cat=favicons/files/010; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
         svg = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
 
-        # cat=favicons/files/b; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.ico
+        # cat=favicons/files/020; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.ico
         ico = EXT:al_favicons/Resources/Public/Icons/favicon.ico
 
-        # cat=favicons/files/c; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngLight
+        # cat=favicons/files/030; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngLight
         pngLight = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
 
-        # cat=favicons/files/c; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngDark
+        # cat=favicons/files/040; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngDark
         pngDark = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
     }
 
-
-
-    # cat=favicons/a; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.themeColor
-    themeColor = #0f172a
-
-    # cat=Favicons/15; type=string; label=App title
+    # cat=favicons/app/010; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.appTitle
     appTitle = RONOS IT
 
+    # cat=favicons/app/020; type=color; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.themeColor.meta
+    themeColor = #0f172a
+
     manifest {
-        # Manifest einschalten
+        # cat=favicons/manifest/010; type=boolean; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.enable
         enable = 1
 
-        # Basis-Daten
-
-        # cat=Favicons/100; type=string; Name for manifest
+        # cat=favicons/manifest/020; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.name
         name = RONOS
 
-        # cat=Favicons/110; type=string; Shortname for manifest
+        # cat=favicons/manifest/030; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.shortName
         shortName = RONOS
 
-        # cat=Favicons/120; type=string; Start url for manifest
+        # cat=favicons/manifest/040; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.startUrl
         startUrl = /
 
+        # cat=favicons/manifest/050; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.scope
         scope = /
+
+        # cat=favicons/manifest/060; type=options[standalone=standalone,fullscreen=fullscreen,minimal-ui=minimal-ui,browser=browser]; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.display
         display = standalone
+
+        # cat=favicons/manifest/070; type=color; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.backgroundColor
         backgroundColor = #ffffff
+
+        # cat=favicons/manifest/080; type=color; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.manifest.themeColor
         themeColor = #0f172a
     }
-
 }
 
-
-
-
-
-
-
-
-
-# === Dynamic CSS ===
-# cat=Favicons CSS/10; type=bool; label=Emit dynamic CSS file (via ?type=8421)
+# Wenn du spfavicons-Felder auch gruppieren willst, hänge sie an favicons/css:
+# cat=favicons/css/010; type=boolean; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.css.generateCss
 plugin.tx.spfavicons.generateCss = 1
-
-# cat=Favicons CSS/20; type=bool; label=No-cache for CSS page (dev only)
+# cat=favicons/css/020; type=boolean; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.css.cssNoCache
 plugin.tx.spfavicons.cssNoCache = 0
-
-
-#################
-
-
-

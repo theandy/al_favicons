@@ -14,6 +14,15 @@
               <trans-unit id="sub.files">
                 <source>Files</source>
                 </trans-unit>
+                <trans-unit id="sub.app">
+                                <source>App</source>
+                                </trans-unit>
+<trans-unit id="sub.manifest">
+                                <source>Manifest</source>
+                                </trans-unit>
+<trans-unit id="sub.css">
+                                <source>CSS</source>
+                                </trans-unit>
 
 <!-- Labels for constants (optional, falls du label=LLL:… verwenden willst) -->
       <trans-unit id="label.files.svg">
