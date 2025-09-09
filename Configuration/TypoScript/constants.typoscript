@@ -1,10 +1,9 @@
 # === Favicons: Basis ===
 
-# cat=Favicons/20; type=string; label=SVG favicon filename
-plugin.tx.alfavicons.svgLight = favicon_light.svg
+
 
 # cat=Favicons/20; type=string; label=SVG favicon filename
-plugin.tx.alfavicons.svgDark = favicon_dark.svg
+plugin.tx.alfavicons.svgFile = EXT:al_favicons/Resources/Private/Partials/Head/SVG.html
 
 # cat=Favicons/20; type=string; label=ICO filename
 # plugin.tx.alfavicons.ico = favicon.ico

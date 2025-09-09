@@ -7,7 +7,8 @@ page {
             file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconsGenerated.html
             variables {
 
-                ico = $plugin.tx.alfavicons.ico}
+                ico = {$plugin.tx.alfavicons.ico}
+                svgFile = {$plugin.tx.alfavicons.svgFile}
 
                 # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
                 lightMasterPNG = TEXT
@@ -20,6 +21,21 @@ page {
             }
         }
 
+        /*
+        90050 = FLUIDTEMPLATE
+        90050 {
+            file = EXT:al_favicons/Resources/Private/Partials/Head/SVG.html
+            variables {
+                svgFile = {$plugin.tx.alfavicons.svgFile}
+            }
+        }
+        */
+
+        90050 = TEXT
+        90050 {
+            data = {$plugin.tx.spfavicons.svgFile}
+            wrap = <link rel="stylesheet" id="andreas" href="|">
+        }
 
         # Dynamische CSS einbinden (als echte Datei über ?type=8421)
         90100 = TEXT

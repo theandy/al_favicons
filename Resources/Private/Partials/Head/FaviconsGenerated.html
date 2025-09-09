@@ -1,6 +1,5 @@
 <!-- Light scheme from one master file -->
-<f:variable name="sizes" value="{0: 16, 1: 32, 2: 180, 3: 192}" />
-
+<f:variable name="sizes" value="{0: 16, 1: 32, 2: 180, 3: 192, 4: 96}" />
 <f:if condition="{ico}">
     <!-- Default favicons (fallback) -->
     <link rel="icon" type="image/x-icon" href="{f:uri.image(src: ico)}">
@@ -12,7 +11,6 @@
     <f:for each="{sizes}" as="s">
         <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: light)" href="{f:uri.image(src: lightMasterPNG, width: s, height: s)}" />
     </f:for>
-
     <!-- Apple touch (from same master) -->
     <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: light)" href="{f:uri.image(src: lightMasterPNG, width: 180, height: 180)}" />
 </f:if>
