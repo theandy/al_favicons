@@ -1,3 +1,4 @@
+# constants.typoscript
 plugin.tx.alfavicons {
 
 
@@ -8,10 +9,10 @@ plugin.tx.alfavicons {
         # cat=Favicons/20; type=string; label=ICO filename
         ico = EXT:al_favicons/Resources/Public/Icons/favicon.ico
 
-        # cat=Favicons/30; type=string; label=ICO filename
+        # cat=Favicons/30; type=string; label=PNG (light) filename
         pngLight = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
 
-        # cat=Favicons/40; type=string; label=ICO filename
+        # cat=Favicons/40; type=string; label=PNG (dark) filename
         pngDark = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
     }
 
@@ -20,7 +21,7 @@ plugin.tx.alfavicons {
     # cat=Favicons/60; type=string; label=Theme color (meta)
     themeColor = #0f172a
 
-    # cat=Favicons/15; type=string; label=SVG favicon filename
+    # cat=Favicons/15; type=string; label=App title
     appTitle = RONOS IT
 
     manifest {
@@ -28,6 +29,8 @@ plugin.tx.alfavicons {
         enable = 1
 
         # Basis-Daten
+
+        # cat=Favicons/100; type=string; Name for manifest
         name = RONOS
         shortName = RONOS
         startUrl = /

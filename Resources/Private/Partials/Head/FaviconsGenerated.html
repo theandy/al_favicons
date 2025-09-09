@@ -20,8 +20,8 @@
     </f:for>
     <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: settings.files.pngDark, width: 180, height: 180)}" />
 </f:if>
-<f:if condition="{svgFile}">
-    <link rel="icon" type="image/svg+xml" href="{f:uri.resource(path: svgFile)}">
+<f:if condition="{settings.files.svgFile}">
+    <link rel="icon" type="image/svg+xml" href="{f:uri.resource(path: settings.files.svgFile)}">
 </f:if>
 <f:if condition="{appTitle}">
     <meta name="apple-mobile-web-app-title" content="{appTitle}">
