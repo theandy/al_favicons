@@ -12,8 +12,8 @@
                 <source>Favicons-Label!</source>
               </trans-unit>
               <trans-unit id="sub.files">
-                      <source>Files</source>
-                    </trans-unit>
+                <source>Files</source>
+                </trans-unit>
 
 <!-- Labels for constants (optional, falls du label=LLL:… verwenden willst) -->
       <trans-unit id="label.files.svg">
@@ -24,6 +24,9 @@
       </trans-unit>
       <trans-unit id="label.files.pngLight">
               <source>PNG: (light mode)</source>
+            </trans-unit>
+      <trans-unit id="label.files.pngDark">
+              <source>PNG: (dark mode)</source>
             </trans-unit>
 
             <trans-unit id="backend_layout.default">
