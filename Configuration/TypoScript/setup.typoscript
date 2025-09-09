@@ -114,6 +114,10 @@ alfavicons_manifest {
         file = EXT:al_favicons/Resources/Private/Templates/Manifest.json
 
         variables {
+
+            lightMasterPNG = TEXT
+            lightMasterPNG.value = {$plugin.tx.alfavicons.lightMasterPNG}
+
             appName = TEXT
             # appName.value = {$plugin.tx.alfavicons.manifest.name}
             appName.value = TEST

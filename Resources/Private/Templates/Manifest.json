@@ -11,9 +11,9 @@
 "icons": [
 </f:format.raw>
 
-<f:if condition="{icon192}">
-icon: {icon192}
-</f:if>
+
+icon: {f:uri.image(src: lightMasterPNG, width: 192, height: 192)}
+
 
 <f:format.raw>
 ]
