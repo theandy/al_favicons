@@ -11,6 +11,9 @@
               <trans-unit id="cat.favicons">
                 <source>Favicons-Label!</source>
               </trans-unit>
+              <trans-unit id="sub.files">
+                      <source>Files</source>
+                    </trans-unit>
 
 <!-- Labels for constants (optional, falls du label=LLL:… verwenden willst) -->
       <trans-unit id="label.files.svg">
@@ -19,6 +22,9 @@
       <trans-unit id="label.files.ico">
         <source>SVG favicon: Path to ICO file</source>
       </trans-unit>
+      <trans-unit id="label.files.pngLight">
+              <source>PNG (light mode)</source>
+            </trans-unit>
 
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
