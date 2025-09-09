@@ -13,12 +13,12 @@
     <!-- Apple touch (from same master) -->
     <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: light)" href="{f:uri.image(src: settings.files.pngLight, width: 180, height: 180)}" />
 </f:if>
-<f:if condition="{pngDark}">
+<f:if condition="{settings.files.pngDark}">
     <!-- Dark mode favicons -->
     <f:for each="{sizes}" as="s">
-        <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: pngDark, width: s, height: s)}" />
+        <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: settings.files.pngDark, width: s, height: s)}" />
     </f:for>
-    <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: pngDark, width: 180, height: 180)}" />
+    <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: settings.files.pngDark, width: 180, height: 180)}" />
 </f:if>
 <f:if condition="{svgFile}">
     <link rel="icon" type="image/svg+xml" href="{f:uri.resource(path: svgFile)}">
