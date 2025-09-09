@@ -19,12 +19,14 @@ page {
                     files {
                         ico = {$plugin.tx.alfavicons.files.ico}
 
-                        svg = TEXT
-                        svg.value = {$plugin.tx.alfavicons.files.svg}
+                        # svg = TEXT
+                        # svg.value = {$plugin.tx.alfavicons.files.svg}
 
                         # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                        pngLight = TEXT
-                        pngLight.value = {$plugin.tx.alfavicons.files.pngLight}
+                        # pngLight = TEXT
+                        # pngLight.value = {$plugin.tx.alfavicons.files.pngLight}
+
+                        pngLight = {$plugin.tx.alfavicons.files.pngLight}
 
                         # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
                         pngDark = TEXT
