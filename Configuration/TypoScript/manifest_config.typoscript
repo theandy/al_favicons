@@ -20,8 +20,6 @@ alfavicons_manifest {
 
         variables {
 
-            lightMasterPNG = TEXT
-            lightMasterPNG.value = {$plugin.tx.alfavicons.lightMasterPNG}
 
             appName = TEXT
             # appName.value = {$plugin.tx.alfavicons.manifest.name}
@@ -51,6 +49,14 @@ alfavicons_manifest {
             icon512 = TEXT
             icon512.value = {$plugin.tx.alfavicons.manifest.icon512}
         }
+
+        settings {
+            files {
+                pngLight = {$plugin.tx.alfavicons.files.pngLight}
+                pngDark = {$plugin.tx.alfavicons.files.pngDark}
+            }
+        }
+
     }
 }
 
