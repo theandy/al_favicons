@@ -1,4 +1,4 @@
 Site Package for the project "AL Favicons"
 ==============================================================
-
-Add some explanation here.
+    map:
+      site.webmanifest: 8422

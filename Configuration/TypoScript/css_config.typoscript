@@ -1,0 +1,52 @@
+# --- PAGE-Objekt, das CSS ausliefert (?type=8421) ---
+spfavicons_css = PAGE
+spfavicons_css {
+    typeNum = 8421
+
+    config {
+        disableAllHeaderCode = 1
+        admPanel = 0
+        xhtml_cleaning = 0
+        no_cache = {$plugin.tx.alfavicons.cssNoCache}
+        additionalHeaders = Content-Type:text/css
+    }
+
+
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:al_favicons/Resources/Private/Templates/Css/Favicons.css
+
+
+        variables {
+            basePath = TEXT
+            basePath.value = {$plugin.tx.alfavicons.basePath}
+
+            themeColor = TEXT
+            themeColor.value = {$plugin.tx.alfavicons.themeColor}
+
+            apple180 = TEXT
+            apple180.value = {$plugin.tx.alfavicons.apple180}
+
+            png192 = TEXT
+            png192.value = {$plugin.tx.alfavicons.png192}
+        }
+
+
+    }
+
+
+
+}
+
+# Dynamische CSS einbinden (als echte Datei über ?type=8421)
+90100 = TEXT
+90100 {
+    typolink {
+        parameter.data = TSFE:id
+        additionalParams = &type=8421
+        returnLast = url
+        forceAbsoluteUrl = 0
+    }
+    wrap = <link rel="stylesheet" id="andreas" href="|">
+    # if.isTrue = {$plugin.tx.spfavicons.generateCss}
+}

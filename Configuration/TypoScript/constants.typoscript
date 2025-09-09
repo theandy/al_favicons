@@ -1,27 +1,48 @@
-# === Favicons: Basis ===
+plugin.tx.alfavicons {
+
+
+    files {
+        # cat=Favicons/10; type=string; label=SVG favicon filename
+        svg = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
+
+        # cat=Favicons/20; type=string; label=ICO filename
+        ico = favicon.ico
+
+        # cat=Favicons/30; type=string; label=ICO filename
+        pngLight = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
+
+        # cat=Favicons/40; type=string; label=ICO filename
+        pngDark = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
+    }
 
 
 
-# cat=Favicons/10; type=string; label=SVG favicon filename
-plugin.tx.alfavicons.svgFile = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
+    # cat=Favicons/60; type=string; label=Theme color (meta)
+    themeColor = #0f172a
 
-# cat=Favicons/15; type=string; label=SVG favicon filename
-plugin.tx.alfavicons.appTitle = RONOS IT
+    # cat=Favicons/15; type=string; label=SVG favicon filename
+    appTitle = RONOS IT
 
-# cat=Favicons/20; type=string; label=ICO filename
-# plugin.tx.alfavicons.ico = favicon.ico
+    manifest {
+        # Manifest einschalten
+        enable = 1
 
-# cat=Favicons/30; type=string; label=ICO filename
-plugin.tx.alfavicons.lightMasterPNG = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
+        # Basis-Daten
+        name = RONOS
+        shortName = RONOS
+        startUrl = /
+        scope = /
+        display = standalone
+        backgroundColor = #ffffff
+        themeColor = #0f172a
+    }
 
-# cat=Favicons/40; type=string; label=ICO filename
-plugin.tx.alfavicons.darkMasterPNG = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
+}
 
-# cat=Favicons/50; type=string; label=Web App Manifest filename
-plugin.tx.spfavicons.manifest = site.webmanifest
 
-# cat=Favicons/60; type=string; label=Theme color (meta)
-plugin.tx.spfavicons.themeColor = #0f172a
+
+
+
 
 
 
@@ -37,18 +58,4 @@ plugin.tx.spfavicons.cssNoCache = 0
 #################
 
 
-# Manifest einschalten
-plugin.tx.alfavicons.manifest.enable = 1
 
-# Basis-Daten
-plugin.tx.alfavicons.manifest.name = RONOS
-plugin.tx.alfavicons.manifest.shortName = RONOS
-plugin.tx.alfavicons.manifest.startUrl = /
-plugin.tx.alfavicons.manifest.scope = /
-plugin.tx.alfavicons.manifest.display = standalone
-plugin.tx.alfavicons.manifest.backgroundColor = #ffffff
-plugin.tx.alfavicons.manifest.themeColor = #0f172a
-
-# Icons (URLs! -> fileadmin oder via _assets)
-plugin.tx.alfavicons.manifest.icon192 = /fileadmin/icons/favicon-192.png
-plugin.tx.alfavicons.manifest.icon512 = /fileadmin/icons/favicon-512.png

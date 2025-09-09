@@ -1,168 +1,39 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:al_favicons/Configuration/TypoScript/css_config.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:al_favicons/Configuration/TypoScript/manifest_config.typoscript">
+
 # --- Favicon-Linktags in den <head> schreiben ---
 page {
+
     headerData {
 
         90000 = FLUIDTEMPLATE
         90000 {
+
             file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconsGenerated.html
             variables {
 
                 appTitle = TEXT
                 appTitle.value = {$plugin.tx.alfavicons.appTitle}
 
+                files {
+                    ico = {$plugin.tx.alfavicons.files.ico}
 
-                ico = {$plugin.tx.alfavicons.ico}
+                    svg = TEXT
+                    svg.value = {$plugin.tx.alfavicons.files.svg}
 
+                    # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
+                    pngLight = TEXT
+                    pngLight.value = {$plugin.tx.alfavicons.files.pngLight}
 
-                svgFile = TEXT
-                svgFile.value = {$plugin.tx.alfavicons.svgFile}
+                    # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
+                    pngDark = TEXT
+                    pngDark.value = {$plugin.tx.alfavicons.files.pngDark}
 
-                # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                lightMasterPNG = TEXT
-                lightMasterPNG.value = {$plugin.tx.alfavicons.lightMasterPNG}
-
-                # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                darkMasterPNG = TEXT
-                darkMasterPNG.value = {$plugin.tx.alfavicons.darkMasterPNG}
-
+                }
             }
         }
 
-        /*
-        90050 = FLUIDTEMPLATE
-        90050 {
-            file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconSvg.html
-            variables {
-                svgFile = TEXT
-                svgFile.value = {$plugin.tx.alfavicons.svgFile}
-            }
-        }
-        */
-
-
-
-        # Dynamische CSS einbinden (als echte Datei über ?type=8421)
-        90100 = TEXT
-        90100 {
-            typolink {
-                parameter.data = TSFE:id
-                additionalParams = &type=8421
-                returnLast = url
-                forceAbsoluteUrl = 0
-            }
-            wrap = <link rel="stylesheet" id="andreas" href="|">
-            # if.isTrue = {$plugin.tx.spfavicons.generateCss}
-        }
-    }
-}
-
-# --- PAGE-Objekt, das CSS ausliefert (?type=8421) ---
-spfavicons_css = PAGE
-spfavicons_css {
-    typeNum = 8421
-
-    config {
-        disableAllHeaderCode = 1
-        admPanel = 0
-        xhtml_cleaning = 0
-        no_cache = {$plugin.tx.spfavicons.cssNoCache}
-        additionalHeaders = Content-Type:text/css
-    }
-
-
-    10 = FLUIDTEMPLATE
-    10 {
-        file = EXT:al_favicons/Resources/Private/Templates/Css/Favicons.css
-
-
-        variables {
-            basePath = TEXT
-            basePath.value = {$plugin.tx.spfavicons.basePath}
-
-            themeColor = TEXT
-            themeColor.value = {$plugin.tx.spfavicons.themeColor}
-
-            apple180 = TEXT
-            apple180.value = {$plugin.tx.spfavicons.apple180}
-
-            png192 = TEXT
-            png192.value = {$plugin.tx.spfavicons.png192}
-        }
 
 
     }
-
-
-
-}
-
-
-
-# --- PAGE-Objekt für Manifest (?type=8422) ---
-alfavicons_manifest = PAGE
-alfavicons_manifest {
-    typeNum = 8422
-    config {
-        disableAllHeaderCode = 1
-        admPanel = 0
-        no_cache = 0
-        additionalHeaders {
-            10 {
-                header = Content-Type: application/manifest+json; charset=utf-8
-                replace = 1
-            }
-        }
-    }
-
-    10 = FLUIDTEMPLATE
-    10 {
-        file = EXT:al_favicons/Resources/Private/Templates/Manifest.json
-
-        variables {
-
-            lightMasterPNG = TEXT
-            lightMasterPNG.value = {$plugin.tx.alfavicons.lightMasterPNG}
-
-            appName = TEXT
-            # appName.value = {$plugin.tx.alfavicons.manifest.name}
-            appName.value = TEST
-
-            shortName = TEXT
-            shortName.value = {$plugin.tx.alfavicons.manifest.shortName}
-
-            startUrl = TEXT
-            startUrl.value = {$plugin.tx.alfavicons.manifest.startUrl}
-
-            scope = TEXT
-            scope.value = {$plugin.tx.alfavicons.manifest.scope}
-
-            display = TEXT
-            display.value = {$plugin.tx.alfavicons.manifest.display}
-
-            backgroundColor = TEXT
-            backgroundColor.value = {$plugin.tx.alfavicons.manifest.backgroundColor}
-
-            themeColor = TEXT
-            themeColor.value = {$plugin.tx.alfavicons.manifest.themeColor}
-
-            icon192 = TEXT
-            icon192.value = {$plugin.tx.alfavicons.manifest.icon192}
-
-            icon512 = TEXT
-            icon512.value = {$plugin.tx.alfavicons.manifest.icon512}
-        }
-    }
-}
-
-# Link im <head> setzen (root der aktuellen Site)
-page.headerData.90610 = TEXT
-page.headerData.90610 {
-    typolink {
-        parameter.data = leveluid:0       # Site-Root
-        additionalParams = &type=8422
-        returnLast = url
-        forceAbsoluteUrl = 0
-    }
-    wrap = <link rel="manifest" href="|">
-    if.isTrue = {$plugin.tx.alfavicons.manifest.enable}
 }

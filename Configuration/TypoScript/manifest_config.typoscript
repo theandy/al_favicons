@@ -1,0 +1,68 @@
+# --- PAGE-Objekt für Manifest (?type=8422) ---
+alfavicons_manifest = PAGE
+alfavicons_manifest {
+    typeNum = 8422
+    config {
+        disableAllHeaderCode = 1
+        admPanel = 0
+        no_cache = 0
+        additionalHeaders {
+            10 {
+                header = Content-Type: application/manifest+json; charset=utf-8
+                replace = 1
+            }
+        }
+    }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:al_favicons/Resources/Private/Templates/Manifest.json
+
+        variables {
+
+            lightMasterPNG = TEXT
+            lightMasterPNG.value = {$plugin.tx.alfavicons.lightMasterPNG}
+
+            appName = TEXT
+            # appName.value = {$plugin.tx.alfavicons.manifest.name}
+            appName.value = TEST
+
+            shortName = TEXT
+            shortName.value = {$plugin.tx.alfavicons.manifest.shortName}
+
+            startUrl = TEXT
+            startUrl.value = {$plugin.tx.alfavicons.manifest.startUrl}
+
+            scope = TEXT
+            scope.value = {$plugin.tx.alfavicons.manifest.scope}
+
+            display = TEXT
+            display.value = {$plugin.tx.alfavicons.manifest.display}
+
+            backgroundColor = TEXT
+            backgroundColor.value = {$plugin.tx.alfavicons.manifest.backgroundColor}
+
+            themeColor = TEXT
+            themeColor.value = {$plugin.tx.alfavicons.manifest.themeColor}
+
+            icon192 = TEXT
+            icon192.value = {$plugin.tx.alfavicons.manifest.icon192}
+
+            icon512 = TEXT
+            icon512.value = {$plugin.tx.alfavicons.manifest.icon512}
+        }
+    }
+}
+
+# Link im <head> setzen (root der aktuellen Site)
+page.headerData.90610 = TEXT
+page.headerData.90610 {
+    typolink {
+        parameter.data = leveluid:0       # Site-Root
+        additionalParams = &type=8422
+        returnLast = url
+        forceAbsoluteUrl = 0
+    }
+    wrap = <link rel="manifest" href="|">
+    if.isTrue = {$plugin.tx.alfavicons.manifest.enable}
+}
