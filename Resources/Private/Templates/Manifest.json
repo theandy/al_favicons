@@ -9,7 +9,9 @@
 "background_color": "{backgroundColor}",
 "theme_color": "{themeColor}",
 "icons": [
-
+<f:if condition="{icon192}">
+icon
+</if>
 ]
 }
 </f:format.raw>
