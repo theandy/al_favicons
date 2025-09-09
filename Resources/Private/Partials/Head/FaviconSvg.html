@@ -1,3 +1,12 @@
 <!-- Resources/Private/Partials/Head/FaviconSvg.html -->
-<link rel="icon" type="image/svg+xml"
-      href="{f:uri.resource(path: svgFile)}">
+
+<f:if condition="{svgFile}">
+    <f:then>
+        <link rel="icon" type="image/svg+xml"
+              href="{f:uri.resource(path: svgFile)}">
+
+    </f:then>
+    <f:else>
+        <!-- no SVG given -->
+    </f:else>
+</f:if>
