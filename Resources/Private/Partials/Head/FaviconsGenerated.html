@@ -5,13 +5,13 @@
     <link rel="icon" type="image/x-icon" href="{f:uri.image(src: ico)}">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-light-32x32.png">
 </f:if>
-<f:if condition="{settings.pngLight}">
+<f:if condition="{settings.files.pngLight}">
     <!-- Light mode favicons -->
     <f:for each="{sizes}" as="s">
-        <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: light)" href="{f:uri.image(src: settings.pngLight, width: s, height: s)}" />
+        <link rel="icon" type="image/png" sizes="{s}x{s}" media="(prefers-color-scheme: light)" href="{f:uri.image(src: settings.files.pngLight, width: s, height: s)}" />
     </f:for>
     <!-- Apple touch (from same master) -->
-    <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: light)" href="{f:uri.image(src: settings.pngLight, width: 180, height: 180)}" />
+    <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: light)" href="{f:uri.image(src: settings.files.pngLight, width: 180, height: 180)}" />
 </f:if>
 <f:if condition="{pngDark}">
     <!-- Dark mode favicons -->
