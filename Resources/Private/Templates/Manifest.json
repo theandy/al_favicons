@@ -10,11 +10,10 @@
 "theme_color": "{themeColor}",
 "icons": [
 <f:if condition="{icon192}">
-{"src":"{f:uri.resource(path: icon192)}","sizes":"192x192","type":"image/png","purpose":"any maskable"}
-<f:if condition="{icon512}">,</f:if>
+{"src":"<f:uri.resource path='{icon192}' />","sizes":"192x192","type":"image/png","purpose":"any maskable"}<f:if condition="{icon512}">,</f:if>
 </f:if>
 <f:if condition="{icon512}">
-{"src":"{f:uri.resource(path: icon512)}","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+{"src":"<f:uri.resource path='{icon512}' />","sizes":"512x512","type":"image/png","purpose":"any maskable"}
 </f:if>
 ]
 }
