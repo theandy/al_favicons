@@ -1,30 +1,30 @@
 # constants.typoscript
 
 # Kategorie- und Subkategorie-Titel aus LLL:
-# customcategory=favicons=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:cat.favicons
-# customsubcategory=favicons/files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
+customcategory=favicons=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:cat.favicons
+customsubcategory=favicons/files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
 
 
 plugin.tx.alfavicons {
 
 
     files {
-        # cat=Favicons/Files/a; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
+        # cat=favicons/files/a; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
         svg = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
 
-        # cat=Favicons/Files/b; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.ico
+        # cat=favicons/files/b; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.ico
         ico = EXT:al_favicons/Resources/Public/Icons/favicon.ico
 
-        # cat=Favicons/Files/c; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngLight
+        # cat=favicons/files/c; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngLight
         pngLight = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
 
-        # cat=Favicons/Files/c; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngDark
+        # cat=favicons/files/c; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.pngDark
         pngDark = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
     }
 
 
 
-    # cat=Favicons/60; type=string; label=Theme color (meta)
+    # cat=favicons/a; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.themeColor
     themeColor = #0f172a
 
     # cat=Favicons/15; type=string; label=App title

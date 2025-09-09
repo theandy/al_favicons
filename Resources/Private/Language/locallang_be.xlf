@@ -29,6 +29,12 @@
               <source>PNG: (dark mode)</source>
             </trans-unit>
 
+                  <trans-unit id="label.themeColor">
+                          <source>Theme color</source>
+                        </trans-unit>
+
+
+
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
