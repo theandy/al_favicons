@@ -11,11 +11,7 @@
 "icons": [
 {
 </f:format.raw>
-
-
-"src": '{f:uri.image(src: lightMasterPNG, width: 192, height: 192)}',
-
-
+"src": '{f:uri.image(src: lightMasterPNG, width: 192, height: 192)}', "sizes": "192x192", "type": "image/png", "purpose": "any maskable"
 <f:format.raw>
 }
 ]
