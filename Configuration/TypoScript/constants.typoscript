@@ -1,5 +1,5 @@
 # constants.typoscript  (oberhalb der Konstanten, NICHT auskommentieren!)
-customcategory=favicons=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:cat.favicons
+customcategory=al_favicons=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:cat.favicons
 customsubcategory=favicons/files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
 customsubcategory=favicons/app=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.app
 customsubcategory=favicons/manifest=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.manifest
@@ -8,7 +8,7 @@ customsubcategory=favicons/css=LLL:EXT:al_favicons/Resources/Private/Language/lo
 plugin.tx.alfavicons {
 
     files {
-        # cat=favicons/files/010; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
+        # cat=al_favicons/files/010; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
         svg = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
 
         # cat=favicons/files/020; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.ico
