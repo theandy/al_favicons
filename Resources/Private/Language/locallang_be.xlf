@@ -16,6 +16,9 @@
       <trans-unit id="label.files.svg">
         <source>SVG favicon: Path to SVG file</source>
       </trans-unit>
+      <trans-unit id="label.files.ico">
+        <source>SVG favicon: Path to ICO file</source>
+      </trans-unit>
 
             <trans-unit id="backend_layout.default">
                 <source>Default</source>

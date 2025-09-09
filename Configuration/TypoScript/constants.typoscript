@@ -11,7 +11,7 @@ plugin.tx.alfavicons {
         # cat=Favicons/Files/a; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.svg
         svg = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
 
-        # cat=Favicons/20; type=string; label=ICO filename
+        # cat=Favicons/Files/b; type=string; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.files.ico
         ico = EXT:al_favicons/Resources/Public/Icons/favicon.ico
 
         # cat=Favicons/30; type=string; label=PNG (light) filename
