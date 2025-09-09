@@ -34,7 +34,7 @@ page {
         90050 = TEXT
         90050 {
             data = {$plugin.tx.spfavicons.svgFile}
-            wrap = <link rel="stylesheet" id="andreas" href="|">
+            wrap = <link rel="icon" type="image/svg+xml" href="|">
         }
 
         # Dynamische CSS einbinden (als echte Datei über ?type=8421)
