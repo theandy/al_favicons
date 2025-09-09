@@ -23,7 +23,7 @@
         <source>SVG favicon: Path to ICO file</source>
       </trans-unit>
       <trans-unit id="label.files.pngLight">
-              <source>PNG (light mode)</source>
+              <source>PNG: (light mode)</source>
             </trans-unit>
 
             <trans-unit id="backend_layout.default">
