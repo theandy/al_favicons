@@ -33,7 +33,7 @@ page {
 
         90050 = TEXT
         90050 {
-            data = {$plugin.tx.spfavicons.svgFile}
+            value = {$plugin.tx.spfavicons.svgFile}
             wrap = <link rel="icon" type="image/svg+xml" href="|">
         }
 
