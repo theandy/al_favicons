@@ -56,6 +56,6 @@ plugin.tx.alfavicons {
 
 # Wenn du spfavicons-Felder auch gruppieren willst, hänge sie an favicons/css:
 # cat=favicons/css/010; type=boolean; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.css.generateCss
-plugin.tx.spfavicons.generateCss = 1
+plugin.tx.alfavicons.generateCss = 1
 # cat=favicons/css/020; type=boolean; label=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:label.css.cssNoCache
-plugin.tx.spfavicons.cssNoCache = 0
+plugin.tx.alfavicons.cssNoCache = 0
