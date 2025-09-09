@@ -32,8 +32,13 @@ plugin.tx.alfavicons {
 
         # cat=Favicons/100; type=string; Name for manifest
         name = RONOS
+
+        # cat=Favicons/110; type=string; Shortname for manifest
         shortName = RONOS
+
+        # cat=Favicons/120; type=string; Start url for manifest
         startUrl = /
+
         scope = /
         display = standalone
         backgroundColor = #ffffff
