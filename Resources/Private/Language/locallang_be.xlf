@@ -6,74 +6,69 @@
             <authorEmail>info@andreasloewer.de</authorEmail>
         </header>
         <body>
-
-        <!-- Categories / Subcategories -->
-              <trans-unit id="cat.favicons">
+            <trans-unit id="cat.favicons">
                 <source>Favicons-Label!</source>
-              </trans-unit>
-              <trans-unit id="sub.files">
+            </trans-unit>
+            <trans-unit id="sub.files">
                 <source>Files</source>
-                </trans-unit>
-                <trans-unit id="sub.app">
-                                <source>App</source>
-                                </trans-unit>
-<trans-unit id="sub.manifest">
-                                <source>Manifest</source>
-                                </trans-unit>
-<trans-unit id="sub.css">
-                                <source>CSS</source>
-                                </trans-unit>
-
-<!-- Labels for constants (optional, falls du label=LLL:… verwenden willst) -->
-      <trans-unit id="label.files.svg">
-        <source>SVG favicon: Path to SVG file</source>
-      </trans-unit>
-      <trans-unit id="label.files.ico">
-        <source>SVG favicon: Path to ICO file</source>
-      </trans-unit>
-      <trans-unit id="label.files.pngLight">
-              <source>PNG: (light mode)</source>
             </trans-unit>
-      <trans-unit id="label.files.pngDark">
-              <source>PNG: (dark mode)</source>
+            <trans-unit id="sub.app">
+                <source>App</source>
+            </trans-unit>
+            <trans-unit id="sub.manifest">
+                <source>Manifest</source>
+            </trans-unit>
+            <trans-unit id="sub.css">
+                <source>CSS</source>
+            </trans-unit>
+            <trans-unit id="label.files.svg">
+                <source>SVG favicon: Path to SVG file</source>
+            </trans-unit>
+            <trans-unit id="label.files.ico">
+                <source>SVG favicon: Path to ICO file</source>
+            </trans-unit>
+            <trans-unit id="label.files.pngLight">
+                <source>PNG: (light mode)</source>
+            </trans-unit>
+            <trans-unit id="label.files.pngDark">
+                <source>PNG: (dark mode)</source>
             </trans-unit>
 
-                  <trans-unit id="label.themeColor">
-                          <source>Theme color</source>
-                        </trans-unit>
+            <trans-unit id="label.themeColor">
+                <source>Theme color</source>
+            </trans-unit>
 
-                  <trans-unit id="label.manifest.enable">
-                          <source>Enable manifest?</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.enable">
+                <source>Enable manifest?</source>
+            </trans-unit>
 
-                  <trans-unit id="label.manifest.name">
-                          <source>Name of manifest file</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.name">
+                <source>Name of manifest file</source>
+            </trans-unit>
 
-<trans-unit id="label.manifest.shortName">
-                          <source>shortName of manifest file</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.shortName">
+                <source>shortName of manifest file</source>
+            </trans-unit>
 
-<trans-unit id="label.manifest.startUrl">
-                          <source>startUrl of manifest</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.startUrl">
+                <source>startUrl of manifest</source>
+            </trans-unit>
 
-<trans-unit id="label.manifest.display">
-                          <source>display of manifest</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.display">
+                <source>display of manifest</source>
+            </trans-unit>
 
-<trans-unit id="label.manifest.scope">
-                          <source>Scope of manifest</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.scope">
+                <source>Scope of manifest</source>
+            </trans-unit>
 
-<trans-unit id="label.manifest.backgroundColor">
-                          <source>backgroundColor of manifest</source>
-                        </trans-unit>
+            <trans-unit id="label.manifest.backgroundColor">
+                <source>backgroundColor of manifest</source>
+            </trans-unit>
 
-<trans-unit id="label.manifest.themeColor">
-                          <source>themeColor of manifest</source>
-                        </trans-unit>
-
+            <trans-unit id="label.manifest.themeColor">
+                <source>themeColor of manifest</source>
+            </trans-unit>
 
 
             <trans-unit id="backend_layout.default">
