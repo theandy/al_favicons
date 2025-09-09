@@ -109,6 +109,7 @@ alfavicons_manifest {
         additionalHeaders {
             10 {
                 header = Content-Type: application/manifest+json; charset=utf-8
+                replace = 1
             }
         }
     }
