@@ -32,3 +32,23 @@ plugin.tx.spfavicons.generateCss = 1
 
 # cat=Favicons CSS/20; type=bool; label=No-cache for CSS page (dev only)
 plugin.tx.spfavicons.cssNoCache = 0
+
+
+#################
+
+
+# Manifest einschalten
+plugin.tx.alfavicons.manifest.enable = 1
+
+# Basis-Daten
+plugin.tx.alfavicons.manifest.name = RONOS
+plugin.tx.alfavicons.manifest.shortName = RONOS
+plugin.tx.alfavicons.manifest.startUrl = /
+plugin.tx.alfavicons.manifest.scope = /
+plugin.tx.alfavicons.manifest.display = standalone
+plugin.tx.alfavicons.manifest.backgroundColor = #ffffff
+plugin.tx.alfavicons.manifest.themeColor = #0f172a
+
+# Icons (URLs! -> fileadmin oder via _assets)
+plugin.tx.alfavicons.manifest.icon192 = /fileadmin/icons/favicon-192.png
+plugin.tx.alfavicons.manifest.icon512 = /fileadmin/icons/favicon-512.png

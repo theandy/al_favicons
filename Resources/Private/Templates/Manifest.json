@@ -1,0 +1,21 @@
+{namespace f=TYPO3\CMS\Fluid\ViewHelpers}
+{f:spaceless()}
+{
+  "name": "{appName -> f:format.raw()}",
+  "short_name": "{shortName -> f:format.raw()}",
+  "start_url": "{startUrl -> f:format.raw()}",
+  "scope": "{scope -> f:format.raw()}",
+  "display": "{display -> f:format.raw()}",
+  "background_color": "{backgroundColor -> f:format.raw()}",
+  "theme_color": "{themeColor -> f:format.raw()}",
+  "icons": [
+    <f:if condition="{icon192}">
+    {"src":"{icon192 -> f:format.raw()}","sizes":"192x192","type":"image/png","purpose":"any maskable"}
+    <f:if condition="{icon512}">,</f:if>
+    </f:if>
+    <f:if condition="{icon512}">
+    {"src":"{icon512 -> f:format.raw()}","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+    </f:if>
+  ]
+}
+{/f:spaceless()}
