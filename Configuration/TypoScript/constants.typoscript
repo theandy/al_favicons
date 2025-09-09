@@ -6,7 +6,7 @@ plugin.tx.alfavicons {
         svg = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
 
         # cat=Favicons/20; type=string; label=ICO filename
-        ico = favicon.ico
+        ico = EXT:al_favicons/Resources/Public/Icons/favicon.ico
 
         # cat=Favicons/30; type=string; label=ICO filename
         pngLight = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
