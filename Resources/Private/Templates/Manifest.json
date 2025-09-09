@@ -9,13 +9,15 @@
 "background_color": "{backgroundColor}",
 "theme_color": "{themeColor}",
 "icons": [
+{
 </f:format.raw>
 
 
-icon: {f:uri.image(src: lightMasterPNG, width: 192, height: 192)}
+"src": '{f:uri.image(src: lightMasterPNG, width: 192, height: 192)}',
 
 
 <f:format.raw>
+}
 ]
 }
 </f:format.raw>
