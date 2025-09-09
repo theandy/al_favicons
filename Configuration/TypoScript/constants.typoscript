@@ -2,22 +2,22 @@
 
 
 
-# cat=Favicons/20; type=string; label=SVG favicon filename
-plugin.tx.alfavicons.svgFile = EXT:al_favicons/Resources/Private/Partials/Head/SVG.html
+# cat=Favicons/10; type=string; label=SVG favicon filename
+plugin.tx.alfavicons.svgFile = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
 
 # cat=Favicons/20; type=string; label=ICO filename
 # plugin.tx.alfavicons.ico = favicon.ico
 
-# cat=Favicons/20; type=string; label=ICO filename
+# cat=Favicons/30; type=string; label=ICO filename
 plugin.tx.alfavicons.lightMasterPNG = EXT:al_favicons/Resources/Public/Icons/favicon-light.png
 
-# cat=Favicons/20; type=string; label=ICO filename
+# cat=Favicons/40; type=string; label=ICO filename
 plugin.tx.alfavicons.darkMasterPNG = EXT:al_favicons/Resources/Public/Icons/favicon-dark.png
 
-# cat=Favicons/30; type=string; label=Web App Manifest filename
+# cat=Favicons/50; type=string; label=Web App Manifest filename
 plugin.tx.spfavicons.manifest = site.webmanifest
 
-# cat=Favicons/40; type=string; label=Theme color (meta)
+# cat=Favicons/60; type=string; label=Theme color (meta)
 plugin.tx.spfavicons.themeColor = #0f172a
 
 
