@@ -15,28 +15,31 @@ page {
                 appTitle = TEXT
                 appTitle.value = {$plugin.tx.alfavicons.appTitle}
 
-                settings {
-                    files {
-                        ico = {$plugin.tx.alfavicons.files.ico}
 
-                        # svg = TEXT
-                        # svg.value = {$plugin.tx.alfavicons.files.svg}
-
-                        # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                        # pngLight = TEXT
-                        # pngLight.value = {$plugin.tx.alfavicons.files.pngLight}
-
-                        pngLight = {$plugin.tx.alfavicons.files.pngLight}
-
-                        # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
-                        pngDark = TEXT
-                        pngDark.value = {$plugin.tx.alfavicons.files.pngDark}
-
-                    }
-                }
 
 
             }
+
+            settings {
+                files {
+                    ico = this is a test!
+
+                    # svg = TEXT
+                    # svg.value = {$plugin.tx.alfavicons.files.svg}
+
+                    # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
+                    # pngLight = TEXT
+                    # pngLight.value = {$plugin.tx.alfavicons.files.pngLight}
+
+                    pngLight = {$plugin.tx.alfavicons.files.pngLight}
+
+                    # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
+                    pngDark = TEXT
+                    pngDark.value = {$plugin.tx.alfavicons.files.pngDark}
+
+                }
+            }
+
         }
 
 
