@@ -4,6 +4,7 @@
 
 # cat=Favicons/10; type=string; label=SVG favicon filename
 plugin.tx.alfavicons.svgFile = EXT:al_favicons/Resources/Public/Icons/Favicon.svg
+plugin.tx.alfavicons.svgTest = yessa
 
 # cat=Favicons/20; type=string; label=ICO filename
 # plugin.tx.alfavicons.ico = favicon.ico

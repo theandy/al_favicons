@@ -26,6 +26,7 @@ page {
             file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconSvg.html
             variables {
                 svgFile = {$plugin.tx.alfavicons.svgFile}
+                svgTest = {$plugin.tx.alfavicons.svgTest}
             }
         }
 
