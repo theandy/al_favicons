@@ -1,9 +1,9 @@
 # constants.typoscript  (oberhalb der Konstanten, NICHT auskommentieren!)
 # customcategory=favicons=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:cat.favicons
 # customsubcategory=files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
-# customsubcategory=favicons/app=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.app
-# customsubcategory=favicons/manifest=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.manifest
-# customsubcategory=favicons/css=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.css
+# customsubcategory=app=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.app
+# customsubcategory=manifest=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.manifest
+# customsubcategory=css=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.css
 
 plugin.tx.alfavicons {
 

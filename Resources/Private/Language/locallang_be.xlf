@@ -7,10 +7,10 @@
         </header>
         <body>
             <trans-unit id="cat.favicons">
-                <source>Favicons-Label!</source>
+                <source>Favicons</source>
             </trans-unit>
             <trans-unit id="sub.files">
-                <source>Files</source>
+                <source>Favicon files</source>
             </trans-unit>
             <trans-unit id="sub.app">
                 <source>App</source>
