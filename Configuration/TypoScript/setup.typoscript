@@ -8,7 +8,7 @@ page {
             variables {
 
                 ico = {$plugin.tx.alfavicons.ico}
-                svgFile = {$plugin.tx.alfavicons.svgFile}
+                # svgFile = {$plugin.tx.alfavicons.svgFile}
 
                 # Master-Dateien pro Scheme (können auch EXT:… Pfade sein)
                 lightMasterPNG = TEXT
@@ -25,8 +25,8 @@ page {
         90050 {
             file = EXT:al_favicons/Resources/Private/Partials/Head/FaviconSvg.html
             variables {
-                svgFile = {$plugin.tx.alfavicons.svgFile}
-                svgTest = {$plugin.tx.alfavicons.svgTest}
+                svgFile = TEXT
+                svgFile.value = {$plugin.tx.alfavicons.svgFile}
             }
         }
 
