@@ -1,6 +1,6 @@
 <f:spaceless>
 <f:format.raw>
-<f:alias map="{curly_brace_left: '{', curly_brace_right: '}'}">
+<f:alias map="{curly_brace_left: '{', curly_brace_right: '}', square_bracket_left: '[', square_bracket_right: ']'}">
 {curly_brace_left}
 "name": "{appName}",
 "short_name": "{shortName}",
@@ -9,10 +9,10 @@
 "display": "{display}",
 "background_color": "{backgroundColor}",
 "theme_color": "{themeColor}",
-"icons": [
+"icons": {square_bracket_left}
 {curly_brace_left}"src": "{f:uri.image(src: lightMasterPNG, width: 192, height: 192)}", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"{curly_brace_right},
 {curly_brace_left}"src": "{f:uri.image(src: lightMasterPNG, width: 512, height: 512)}", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"{curly_brace_right}
-]
+{square_bracket_right}
 {curly_brace_left}
 </f:alias>
 </f:format.raw>
