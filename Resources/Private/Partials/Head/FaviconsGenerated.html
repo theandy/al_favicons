@@ -22,3 +22,13 @@
     </f:for>
     <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: dark)" href="{f:uri.image(src: darkMasterPNG, width: 180, height: 180)}" />
 </f:if>
+
+<f:if condition="{svgFile}">
+    <link rel="icon" type="image/svg+xml" href="{f:uri.resource(path: svgFile)}">
+</f:if>
+
+<f:if condition="{appTitle}">
+    <meta name="apple-mobile-web-app-title" content="{appTitle}">
+    <meta name="application-name" content="{appTitle}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</f:if>
