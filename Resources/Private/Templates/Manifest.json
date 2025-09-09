@@ -1,5 +1,3 @@
-<f:spaceless>
-<f:format.raw>
 <f:alias map="{curly_brace_left: '{', curly_brace_right: '}', square_bracket_left: '[', square_bracket_right: ']'}">
 {curly_brace_left}
 "name": "{appName}",
@@ -15,5 +13,3 @@
 {square_bracket_right}
 {curly_brace_left}
 </f:alias>
-</f:format.raw>
-</f:spaceless>
