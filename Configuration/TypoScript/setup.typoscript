@@ -144,3 +144,16 @@ alfavicons_manifest {
         }
     }
 }
+
+# Link im <head> setzen (root der aktuellen Site)
+page.headerData.90610 = TEXT
+page.headerData.90610 {
+    typolink {
+        parameter.data = leveluid:0       # Site-Root
+        additionalParams = &type=8422
+        returnLast = url
+        forceAbsoluteUrl = 0
+    }
+    wrap = <link rel="manifest" href="|">
+    if.isTrue = {$plugin.tx.alfavicons.manifest.enable}
+}
