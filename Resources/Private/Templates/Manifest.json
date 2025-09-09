@@ -12,8 +12,8 @@
 </f:format.raw>
 
 <f:if condition="{icon192}">
-icon
-</if>
+icon: {icon192}
+</f:if>
 
 <f:format.raw>
 ]
