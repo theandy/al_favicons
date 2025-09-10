@@ -43,11 +43,6 @@ alfavicons_manifest {
             themeColor = TEXT
             themeColor.value = {$plugin.tx.alfavicons.manifest.themeColor}
 
-            icon192 = TEXT
-            icon192.value = {$plugin.tx.alfavicons.manifest.icon192}
-
-            icon512 = TEXT
-            icon512.value = {$plugin.tx.alfavicons.manifest.icon512}
         }
 
         settings {

@@ -22,16 +22,16 @@
                 <source>CSS</source>
             </trans-unit>
             <trans-unit id="label.files.svg">
-                <source>SVG favicon: Path to SVG file</source>
+                <source>SVG: Path to .svg file</source>
             </trans-unit>
             <trans-unit id="label.files.ico">
-                <source>SVG favicon: Path to ICO file</source>
+                <source>ICO: Path to .ico file</source>
             </trans-unit>
             <trans-unit id="label.files.pngLight">
-                <source>PNG: (light mode)</source>
+                <source>PNG (light mode): Path to .png file for browser in light mode</source>
             </trans-unit>
             <trans-unit id="label.files.pngDark">
-                <source>PNG: (dark mode)</source>
+                <source>PNG (dark mode): Path to .png file for browser in dark mode</source>
             </trans-unit>
 
             <trans-unit id="label.themeColor">
