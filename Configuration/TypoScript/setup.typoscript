@@ -2,7 +2,13 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:al_favicons/Configuration/TypoScript/css_config.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:al_favicons/Configuration/TypoScript/manifest_config.typoscript">
 
+
+
 page {
+
+    // disable default icon of sitepackages for example:
+    shortcutIcon >
+
     headerData {
         90000 = FLUIDTEMPLATE
         90000 {
